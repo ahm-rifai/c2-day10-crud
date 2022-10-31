@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form contact</title>
+
+    <!-- EXTERNAL BOOTSTRAP -->
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="../public/CSS/style.css">
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand me-5" href="/">
+          <img src="../public/IMG/logo.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-3" aria-current="page" href="/add-project">Add Project</a>
+            </li>
+          </ul>
+          <a href="/contact" class="btn btn-dark py-1">Contact Me</a>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- FORM  -->
+    <div class="container-form">
+        <form action="">
+
+            <h3 style="display: flex; justify-content: center; font-weight: 700;">GET IN TOUCH</h3>
+            <div>
+                <label for="input-name">Name</label>
+                <input id="input-name" type="text">
+            </div>
+
+            <div>
+                <label for="input-email">Email</label>
+                <input id="input-email" type="email">
+            </div>
+
+            <div>
+                <label for="input-phone">Phone Number</label>
+                <input id="input-phone" type="tel">
+            </div>
+
+            <div>
+                <label for="input-subject">Subject</label>
+                <select id="input-subject">
+                    <option hidden></option>
+                    <option>Let's Talk</option>
+                    <option>Let's Collaboration</option>
+                    <option>I am Hiring</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="input-message">Your Message</label>
+                <textarea id="input-message"></textarea>
+            </div>
+
+            <button type="button" onclick="getData()">Submit</button>
+
+        </form>
+    </div>
+    <!-- END FORM -->
+
+
+    <!-- EXTERNAL JS -->
+    <script src="../public/JS/index.js"></script>
+
+    <!-- EXTERNAL JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

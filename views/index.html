@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>struct interface manipulation</title>
+
+    <!-- EXTERNAL BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="../public/CSS/style.css">
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand me-5" href="/">
+            <img src="../public/IMG/logo.png">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-3" aria-current="page" href="/add-project">Add Project</a>
+              </li>
+            </ul>
+            <a href="/contact" class="btn btn-dark py-1">Contact Me</a>
+          </div>
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+
+    <!-- CONTENT PROFIL-->
+    <div class="containers">
+        <section>
+            <div class="section-left">
+                <h3>Hello, Welcome to My Website.</h3>
+                <p>
+                    Hi, I'm Rifa'i. A student of S1 Informatics Engineering University of Raharja, who focuses on Frontend Development. Often use HTML5, CSS3, JavaScript(ES6), Bootstrap, Node JS, React Native, and Golang in some projects. I also have communication skills, design thinking, and problem solving. I am currently attending a coding bootcamp at DumbWays Indonesia.
+                </p>
+
+                <div class="download">
+                    <div>
+                        <a href="https://web.whatsapp.com/085778173911" target="_blank"><button>Contact</button></a>
+                    </div>
+
+                    <div class="cv">
+                        <a href="../public/IMG/rifai cv.png" target="_blank">download CV<img src="../public/IMG/download.png"></a>
+                    </div>
+                </div>
+
+                <div class="icon-sosmed">
+                    <a href="https://www.linkedin.com/in/rifaiachmad/" target="_blank"><img src="../public/IMG/linkedin.png"></a>
+                    <a href="https://github.com/ahm-rifai" target="_blank"><img src="../public/IMG/github.png"></a>
+                    <a href="https://www.instagram.com/arifai27/" target="_blank"><img src="../public/IMG/instagram.png"></a>
+                    <a href="https://web.whatsapp.com/085778173911" target="_blank"><img src="../public/IMG/whatsapp.png"></a>
+                </div>
+            </div>
+
+            <div class="section-right">
+                <div class="card">
+                    <img src="../public/IMG/pai3.png" alt="profil" width="100%">
+                    <div>
+                        <h4>Achmad Rifa'i</h4>
+                        <p>Fullstack Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- END CONTENT PROFIL -->
+
+
+    <!-- LIST PROJECT -->
+    <div class="containerr">
+        <h3>MY PROJECT</h3>
+
+        <div class="list-project" id="list-myproject">
+            
+            {{range $index, $data := .DataProject}}
+            <div class="list-item-project">
+                <a href="/project-detail/{{$data.ID}}">
+                    <div class="img-card">
+                        <img src="../public/IMG/{{$data.Image}}">
+                    </div>
+
+                    <div class="title-card">
+                        <h6>{{$data.ProjectName}}</h6>
+                    </div>
+
+                    <div class="drt-card">
+                        <p>durasi: {{$data.Duration}}</p>
+                    </div>
+
+                    <div class="desc-card">
+                        <p>{{$data.Description}}</p>
+                    </div>
+
+                    <div class="icon-card">
+                        {{range $index, $selectIcon := $data.Technologies}}
+                            {{if eq $selectIcon "node"}}
+                                <img src="../public/IMG/nodejs.png"/>
+                            {{else if eq $selectIcon "react"}}
+                                <img src="../public/IMG/react.png"/>
+                            {{else if eq $selectIcon "next"}}
+                                <img src="../public/IMG/nextjs.png"/>
+                            {{else if eq $selectIcon "type"}}
+                                <img src="../public/IMG/typescript.png"/>
+                            {{end}}
+                        {{end}}
+                    </div>
+                </a>
+                
+                <div class="btn-card">
+                    <div class="btn-edit">
+                        <a href="/edit-project/{{$data.ID}}"><button>edit</button></a>
+                    </div>
+                    <div class="btn-del">
+                        <a href="/delete-project/{{$data.ID}}"><button>delete</button></a>
+                    </div>
+                </div>
+            </div>
+            {{end}}
+
+        </div>
+
+    </div>
+    <!-- END LIST PROJECT -->
+
+
+    <!-- EXTERNAL JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

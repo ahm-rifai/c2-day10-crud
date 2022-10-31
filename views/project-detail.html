@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project detail</title>
+
+    <!-- EXTERNAL BOOTSTRAP -->
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="../public/CSS/style-2.css">
+
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand me-5" href="/">
+            <img src="../public/IMG/logo.png">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-3" aria-current="page" href="/add-project">Add Project</a>
+              </li>
+            </ul>
+            <a href="/contact" class="btn btn-dark py-1">Contact Me</a>
+          </div>
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+
+    <!-- PROJECT DETAIL -->
+    <div class="page">
+
+        <div class="title-page">
+            <h1>{{.RenderProjectDetail.ProjectName}}</h1>
+        </div>
+
+        <div class="detail-page">
+            <div class="img-page">
+                <img src="../public/IMG/{{.RenderProjectDetail.Image}}">
+            </div>
+
+            <div class="detail-info-page">
+                <div class="drt-info">
+                    <h3>Duration</h3>
+                    <div class="date-page" id="date-page">
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/calendar.png"/>
+                        <label id="start-date">{{.RenderProjectDetail.FormatStartDate}}</label>
+                        <label >-</label>
+                        <label id="end-date">{{.RenderProjectDetail.FormatEndDate}}</label>
+                    </div>
+                    <div class="drt-page">
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/time-span.png"/>
+                        <label>{{.RenderProjectDetail.Duration}}</label>
+                    </div>
+                </div>
+
+                <h3 id="myparaf">Technologies</h3>
+
+                <div class="tech-info">
+                    <div class="left-info">
+                        {{range $index, $selectIcon := .RenderProjectDetail.Technologies}}
+                        {{if eq $selectIcon "node"}}    
+                        <div class="tech1">
+                            <img id="node" src="../public/IMG/nodejs.png">                            
+                            <label for="">Node JS</label>
+                        </div>
+
+                        {{else if eq $selectIcon "react"}}
+                        <div class="tech2">
+                            <img id="react" src="../public/IMG/react.png">                    
+                            <label for="">React JS</label>
+                        </div>
+
+                    </div>
+                    <div class="right-info">
+                        {{else if eq $selectIcon "next"}}
+                        <div class="tech3">
+                            <img id="next" src="../public/IMG/nextjs.png">                    
+                            <label for="">Next JS</label>
+                        </div>
+
+                        {{else if eq $selectIcon "type"}}
+                        <div class="tech4">
+                            <img id="typescript" src="../public/IMG/typescript.png">                            
+                            <label for="">TypeScript JS</label>
+                        </div>
+                        {{end}}
+                        {{end}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="desc-page">
+            <p>{{.RenderProjectDetail.Description}}</p>
+        </div>
+
+    </div>
+    <!-- END PROJECT DETAIL -->
+    
+
+    <!-- EXTERNAL JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins !important;
+}
+
+/* === NAVBAR === */
+nav {
+  height: 7vh;
+}
+
+
+/* === CARD PROFILE */
+.containers {
+  background-color: #E3E7EB;
+  height: 93vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+background-color: #fff;
+display: flex;
+width: 80%;
+border-radius: 10px;
+box-shadow: 0 0 30px rgb(189, 189, 189);
+padding: 35px;
+}
+
+/* === LEFT TEKS === */
+.section-left {
+/* background-color: yellow; */
+flex: 60%;
+}
+
+.section-left h3 {
+text-align: justify;
+margin-top: 30px;
+font-weight: 600;
+}
+
+.section-left p {
+text-align: justify;
+margin-top: 20px;
+}
+
+button {
+padding: 8px 32px;
+background-color: #111727;
+color: white;
+border-radius: 32px;
+font-size: medium;
+/* margin-top: 20px; */
+cursor: pointer;
+border: none;
+}
+
+button:hover {
+background-color: black;
+}
+
+.download {
+display: flex;
+align-items: center;
+justify-content: left;
+margin-top: 40px;
+/* background-color: red; */
+}
+
+.download a{
+color: black;
+text-decoration: none;
+font-size: large;
+font-weight: 400;
+/* margin-top: 10px; */
+}
+
+.download .cv img {
+width: 25px;
+margin-left: 10px;
+float: right;
+}
+
+.cv {
+display: flex;
+margin-left: 20px;
+}
+
+.icon-sosmed {
+margin-top: 50px;
+}
+
+.icon-sosmed img {
+width: 45px;
+margin-right: 20px;
+}
+
+
+/* === RIGHT-CARD === */
+.section-right {
+/* background-color: aqua; */
+flex: 40%;
+}
+
+.card {
+width: 350px;
+background-color: white;
+border-radius: 12px;
+margin-left: 60px;
+box-shadow: 0 0 30px rgb(189, 189, 189);;
+}
+
+.card img {
+border-radius: 12px 12px 0 0;
+}
+
+.card h4 {
+text-align: center;
+margin: 0;
+margin-top: 12px;
+font-weight: 600;
+}
+
+.card p {
+text-align: center;
+margin: 0;
+padding-bottom: 12px;
+font-weight: 500;
+color: gray;
+}
+
+
+
+
+
+
+
+
+/* === LIST PROJECT === */
+.containerr h3 {
+/* background-color: red; */
+margin: 30px auto;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 600;
+}
+
+.list-project {
+  /* background-color: yellow; */
+  width: 1030px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-item-project {
+  margin: 20px;
+  width: 300px;
+  height: 430px;
+  box-shadow: 0px 5px 20px rgb(216, 216, 216);
+  border: 0.2px solid rgb(216, 216, 216);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.list-project .list-item-project a {
+  text-decoration: none;
+}
+
+.list-item-project .img-card {
+  width: 280px;
+  height: 200px;
+  margin: 10px auto;
+}
+
+.list-item-project .img-card img {
+  width: 100%;
+  height: 170px;
+  border-radius: 8px;
+}
+
+.list-item-project .title-card {
+  padding-left: 10px;
+  margin-top: -30px;
+  font-size: 14px;
+}
+
+.list-item-project .title-card h6 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.list-item-project .drt-card {
+  color: rgb(156, 156, 156);
+  padding-left: 10px;
+}
+
+.list-item-project .desc-card {
+  margin-top: 12px;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: justify;
+  height: 70px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-item-project .icon-card img {
+  width: 30px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.list-item-project .btn-card {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  margin-top: 30px;
+}
+
+.list-item-project .btn-card button {
+  width: 140px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(0, 0, 20);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+/* === FORM CONTACT === */
+.container-form {
+background-color: #E4E7EA;
+height: 93vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.conatainer-form, form {
+/* background-color: aqua; */
+padding: 0px;
+}
+
+form div {
+margin-top: 10px;
+}
+
+.container-form form label {
+font-size: 20px;
+font-weight: bold;
+}
+
+.container-form form input,
+textarea, select {
+background: rgb(255, 255, 255);
+padding: 8px;
+width: 100%;
+font-size: 20px;
+font-weight: 400;
+margin-top: 5px;
+/* margin-bottom: 20px; */
+border-radius: 5px;
+border: 1px solid rgb(224, 223, 223);
+box-shadow: 0px 0px 15px rgb(194, 194, 194);
+box-sizing: border-box;
+}z
+
+.container-form form textarea {
+height: 70px;
+}
+
+.container-form form button {
+padding: 7px 30px;
+font-size: 17px;
+background: rgb(17,23,39);
+border-radius: 20px;
+border: none;
+color: #fff;
+cursor: pointer;
+margin-top: 10px;
+float: right;
+}

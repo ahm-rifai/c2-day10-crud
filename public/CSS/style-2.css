@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins !important;
+}
+
+/* === NAVBAR === */
+nav {
+  height: 7vh;
+}
+
+
+/* === FORM PROJECT === */
+.container-1 {
+  background-color: #E3E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  /* height: 93vh; */
+}
+
+.container-1 .container-form {
+  /* background-color: yellow; */
+  width: 30%;
+}
+
+.container-1 h3 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+input, textarea, .container-1 .container-form .img-project .input-image label {
+  /* background-color: red; */
+  box-shadow: 0px 5px 5px 0px rgb(185, 185, 185);
+  border: 1px solid rgb(202, 202, 202);
+  padding: 4px 4px 4px 8px;
+}
+
+.container-1 .container-form .title-project {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.container-1 .container-form .title-project input {
+  background: rgb(255, 255, 255);
+  padding: 8px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(224, 223, 223);
+}
+
+.container-1 .container-form .date-project {
+  /* background-color: red; */
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.container-1 .container-form .date-project .start-date {
+  /* background-color: red; */
+  padding-right: 8px;
+  width: 50%;
+}
+
+.container-1 .container-form .date-project .end-date {
+  /* background-color: white; */
+  padding-left: 8px;
+  width: 50%;
+}
+
+.container-1 .container-form .date-project input {
+  background: rgb(255, 255, 255);
+  padding: 8px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(224, 223, 223);
+}
+
+.container-1 .container-form .desc-project {
+  /* background-color: red; */
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.container-1 .container-form .desc-project textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  background: rgb(255, 255, 255);
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(224, 223, 223);
+}
+
+.container-1 .container-form .tech-project {
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.container-1 .container-form .tech-project .left-checkbox label {
+  margin-left: 10px;
+}
+
+.container-1 .container-form .tech-project .right-checkbox label {
+  margin-left: 10px;
+}
+
+.container-1 .container-form .tech-project .left-checkbox {
+  /* background-color: red; */
+  width: 40%;
+  margin-top: 10px;
+  color: rgb(110, 110, 110);
+}
+
+.container-1 .container-form .tech-project .right-checkbox {
+  /* background-color: red; */
+  width: 40%;
+  margin-top: -60px;
+  margin-left: 200px;
+  color: rgb(110, 110, 110);
+}
+
+.img-project {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  margin-top: 15px;
+}
+
+.img-project p {
+  display: flex;
+  font-size: 18px;
+  color: rgb(116, 116, 116);
+  background-color: rgb(231, 231, 231);
+  border-radius: 5px;
+  border: 1px solid rgb(204, 204, 204);
+  height: 40px;
+  width: 75px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.img-project .upload {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(204, 204, 204);
+  width: 97%;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px 0px rgb(185, 185, 185);;
+}
+
+.img-project label img {
+  width: 25px;
+}
+
+.container-1 .container-form .btn-project button {
+  padding: 7px 30px;
+  font-size: 17px;
+  background: rgb(17,23,39);
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  float: right;
+}
+
+.container-1 .container-form .btn-project button:hover {
+  background-color: black;
+}
+
+
+
+
+
+/* === PROJECT DETAIL === */
+.page {
+display: flex;
+flex-direction: column;
+padding: 70px;
+width: 1000px auto;
+}
+
+.page .title-page h1 {
+font-size: 30px;
+text-align: center;
+margin-bottom: 40px;
+}
+
+.detail-page {
+display: flex;
+margin-top: 40px;
+}
+
+.img-page {
+justify-content: flex-start;
+}
+
+.img-page img {
+width: 650px;
+}
+
+.detail-info-page {
+width: 500px;
+margin-left: 110px;
+}
+
+.detail-info-page h3 {
+font-weight: 600;
+}
+
+.drt-info img {
+width: 25px;
+}
+
+.drt-info label {
+color: gray;
+font-weight: 500;
+margin-left: 20px;
+}
+
+.drt-info div {
+display: flex;
+align-items: center;
+margin-top: 15px;
+}
+
+.detail-info-page #myparaf {
+margin-top: 40px;
+margin-bottom: -10px;
+font-weight: 600;
+}
+
+.tech-info {
+/* background-color: red; */
+margin-top: 20px;
+display: flex;
+}
+
+.tech-info img {
+width: 25px;
+}
+
+.tech-info label {
+color: gray;
+font-weight: 500;
+margin-left: 20px;
+}
+
+.tech-info .left-info div {
+/* background-color: yellow; */
+display: flex;
+align-items: center;
+padding: 5px;
+}
+
+.tech-info .right-info div {
+/* background-color: white; */
+display: flex;
+align-items: center;
+/* justify-content: left; */
+/* margin-top: 3px; */
+margin-left: 25px;
+padding: 6.4px;
+}
+
+.desc-page {
+margin-top: 60px;
+}
+
+.desc-page p {
+text-align: justify;
+}
+
